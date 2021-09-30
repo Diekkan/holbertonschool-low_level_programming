@@ -1,5 +1,6 @@
 #include <stdio.h>
-/*
+
+/**
  * main - the main function
  * Return: the value that returns to the OS
  */
