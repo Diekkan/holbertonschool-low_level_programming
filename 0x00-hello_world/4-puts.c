@@ -2,6 +2,7 @@
 
 /**
  * main - a function
+ * return - returns a value
  */
 int main(void)
 {
