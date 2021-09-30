@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * int_main - a function
- * return - returns a value
+ * main - a function
+ * Return: returns a value
  */
 int main(void)
 {
