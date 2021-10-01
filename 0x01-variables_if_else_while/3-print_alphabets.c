@@ -9,10 +9,7 @@ int main(void)
 	int lowc;
 	char newline = '\n';
 
-	for (lowc = 'a'; lowc <= 'z'; lowc++)
-	putchar(lowc);
-
-	for (lowc = 'z'; lowc <= 'Z'; lowc++)
+	for (lowc = 'a'; lowc <= 'Z'; lowc++)
 	putchar(lowc);
 
 	putchar(newline);
