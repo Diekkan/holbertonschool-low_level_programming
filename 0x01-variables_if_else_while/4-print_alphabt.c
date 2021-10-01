@@ -7,8 +7,7 @@
 int main(void)
 {
 	int lowc;
-	char newline = '\n';
-	lowc = 'a';
+		char newline = '\n';
 
 	for (lowc = 'a'; lowc <= 'z'; lowc++)
 	{
