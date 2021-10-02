@@ -1,20 +1,23 @@
 #include <stdio.h>
+
 /**
  * main - main function
  * Return: 0 success
  */
+
 int main(void)
 {
-        int n;
-	char alpha;
+	int n;
+	int alpha;
+	int newline = '\n';
 
-        for (n = 48; n <= 57; n++)
-        putchar(n);
-	
-	for (alpha = 'a'; alpha >= 'f'; alpha++)
-	putchar(alpha);
+	for (n = 48; n <= 57; n++)
+		putchar(n);
 
-        putchar('\n');
+	for (alpha = 97; alpha <= 102; alpha++)
+		putchar(alpha);
+
+	putchar(newline)
 
 	return (0);
 }
