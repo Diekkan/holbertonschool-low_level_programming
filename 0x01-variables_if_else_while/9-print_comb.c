@@ -8,7 +8,7 @@
 
 int main(void)
 {
-        int alpha;
+	int alpha;
 
 	for (alpha = 48; alpha <= 57; alpha++)
 	{
@@ -22,7 +22,7 @@ int main(void)
 	}
 
 
-        putchar('\n');
+	putchar('\n');
 
-       return (0);
+	return (0);
 }
