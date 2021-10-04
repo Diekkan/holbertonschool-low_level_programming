@@ -16,8 +16,14 @@ int main(void)
 	{
 		putchar(digit1);
 		putchar(digit2);
-		putchar(44);
-		putchar(32);
+	
+	if (digit1 == '9' && digit2 == '8')
+	{
+	putchar(newline);
+	}
+	else 
+	putchar(44);
+	putchar(32);
 	}
 	}
 
