@@ -6,12 +6,10 @@
  * Return: 0 success.
  */
 
-int _abs(int i)
+int _abs(int n)
 {
-	if (i >= 0)
-		printf("%d", i);
+	if (n >= 0) 
+		return (n);
 	else
-		printf("%d", -i);
-
-	return (0);
+		return (-n);
 }
