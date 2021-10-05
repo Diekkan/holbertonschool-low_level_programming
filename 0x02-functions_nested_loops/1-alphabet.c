@@ -9,6 +9,6 @@ void print_alphabet(void)
 	int lowc;
 
 	for (lowc = 97; lowc <= 122; lowc++)
-	putchar(lowc);
-	putchar('\n');
+	_putchar(lowc);
+	_putchar('\n');
 }
