@@ -2,7 +2,7 @@
 #include "main.h"
 /**
  * print_last_digit - prints last digit
- * @d: digit int.
+ * @n: digit int.
  * Return: 0 success.
  */
 
