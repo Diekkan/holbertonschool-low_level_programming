@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * print_diagonal - function that draws a diagonal line on the terminal.
- * @n: number of lines.
+ * print_line - a function that draws a straight line in the terminal.
+ * @n: number of straight lines.
  */
 
-void print_diagonal(int n)
+void print_line(int n)
 {
-	int lines;
+	int line;
 
 	if (n <= 0)
 	{
@@ -14,9 +14,11 @@ void print_diagonal(int n)
 	}
 	else
 	{
-		for (lines = 0; lines < n; lines++)
-			_putchar (47);
-			_putchar (10);
-	}
+		for (line = 0; line < n; line++)
+		{
+			_putchar (95);
+		}
+	_putchar (10);
 
+	}
 }
