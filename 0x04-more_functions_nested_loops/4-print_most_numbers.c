@@ -2,6 +2,7 @@
 #include "main.h"
 /**
  * print_most_numbers - prints numbers between 0 and 9, except for 2 and 4
+ * Return: 0 success
  */
 
 void print_most_numbers(void)
@@ -14,11 +15,7 @@ void print_most_numbers(void)
 		{
 			_putchar(numbers);
 		}
-		else
-		{
-			continue;
-		}
 	}
 
-	_putchar(numbers);
+	_putchar(10);
 }	
