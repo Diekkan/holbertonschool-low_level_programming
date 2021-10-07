@@ -15,10 +15,13 @@ int main(void)
 
 	while (i < 10)
 	{
-		putchar(i);// this line of code is wrong
+	/**
+	 * this line is incorrect
+	 */
+	putchar(i);
 	}
-	
+
 	printf("Infinite loop avoided! \\o/\n");
-	
+
 	return (0);
 }
