@@ -6,7 +6,7 @@
  */
 
 void _puts(char *str)
-{	
+{
 	int string = 0;
 
 	for (; *(str + string) != 0; string++)
