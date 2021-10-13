@@ -14,7 +14,7 @@ void print_rev(char *s)
 
 	rev = string;
 
-	for (; *(s + rev) != (rev >= 0); rev--)
+	for (; *(s + rev) != (rev == 0); rev--)
 	{
 		_putchar(*(s + rev));
 	}
