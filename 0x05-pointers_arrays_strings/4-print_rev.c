@@ -11,6 +11,10 @@ void print_rev(char *s)
 	int rev;
 
 	for (string = 0; s[string] != '\0'; string++)
+	{
+		if (*s == ' ')
+			break;
+	}
 
 	rev = string;
 	while (rev >= 0)
