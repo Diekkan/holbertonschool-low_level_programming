@@ -12,12 +12,12 @@ void print_rev(char *s)
 
 	if (*s == ' ')
 	{
-		_putchar(*s);
+		_putchar(' ');
 	}
 	else
 	{
 		for (string = 0; s[string] != '\0'; string++)
-	
+
 
 		rev = string;
 		while (rev >= 0)
