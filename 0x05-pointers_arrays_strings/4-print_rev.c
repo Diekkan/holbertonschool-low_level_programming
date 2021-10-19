@@ -10,9 +10,9 @@ void print_rev(char *s)
 	int string;
 	int rev;
 
-	if (*s == ' ')
+	if (*s == 0)
 	{
-		_putchar(' ');
+
 	}
 	else
 	{
