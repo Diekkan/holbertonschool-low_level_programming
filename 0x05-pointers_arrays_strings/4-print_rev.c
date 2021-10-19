@@ -10,23 +10,22 @@ void print_rev(char *s)
 	int string;
 	int rev;
 
-	for (string = 0; s[string] != '\0'; string++)
+	if (*s == ' ')
 	{
-		if (*s == ' ')
-			break;
+		_putchar(*s);
 	}
-
-	rev = string;
-	while (rev >= 0)
+	else
 	{
-		if (*s == ' ')
-			break;
-		else
+		for (string = 0; s[string] != '\0'; string++)
+	
+
+		rev = string;
+		while (rev >= 0)
 		{
-		_putchar(s[rev]);
-		rev--;
+			_putchar(s[rev]);
+			rev--;
 		}
-	}
 
-	_putchar('\n');
+		_putchar('\n');
+	}
 }
