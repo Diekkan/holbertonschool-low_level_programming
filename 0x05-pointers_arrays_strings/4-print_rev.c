@@ -11,13 +11,9 @@ void print_rev(char *s)
 	int rev;
 
 	for (string = 0; s[string] != '\0'; string++)
-	{
-		if (*s == ' ')
-			break;
-	}
 
 	rev = string;
-	while (rev > 0)
+	while ((rev >= 0) && (*s != ' '))
 	{
 		_putchar(s[rev]);
 		rev--;
