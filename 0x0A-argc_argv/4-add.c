@@ -5,7 +5,7 @@
  * main - a program that adds positive numbers.
  *@argc: argument counter.
  *@argv: argument values.
- *Return:
+ *Return: 1 error, 0 success.
  */
 
 int main(int argc, char *argv[])
@@ -22,8 +22,7 @@ int main(int argc, char *argv[])
 		else if (atoi(argv[i]) < 0 && (argv[i] != 0))
 		{
 			printf("Error\n");
-			return (-1);
-			break;
+			return (1);
 		}
 		else
 		{
