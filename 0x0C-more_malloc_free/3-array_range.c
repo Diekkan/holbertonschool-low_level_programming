@@ -26,7 +26,7 @@ int *array_range(int min, int max)
 	j = 0;
 	while (j < i)
 	{
-		p[j] = j + min;
+		*p++ = j + min;
 		j++;
 	}
 
