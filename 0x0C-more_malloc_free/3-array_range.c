@@ -29,7 +29,7 @@ int *array_range(int min, int max)
 
 	}
 
-	p = (int *) malloc(sizeof(p) * (i + 1));
+	p = (int *) malloc(sizeof(p) * i);
 
 	if (p == NULL)
 		return (NULL);
