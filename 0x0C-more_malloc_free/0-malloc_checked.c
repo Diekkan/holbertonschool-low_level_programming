@@ -9,12 +9,16 @@
 
 void *malloc_checked(unsigned int b)
 {
-	int *p;
+	unsigned int *p;
 
-	p = (int *) malloc(sizeof(unsigned int) * b);
+	p = (unsigned int *) malloc(sizeof(*p) * b);
 
 	if ((p == NULL) || (b == INT_MAX))
 		exit(98);
 	else
+	{
 		return (p);
+		free(p);
+	}
+
 }
