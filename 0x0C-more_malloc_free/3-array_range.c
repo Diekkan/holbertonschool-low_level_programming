@@ -4,7 +4,7 @@
  * array_range - creates an array.
  *@min: min
  *@max: max
- *Return: return pointer.
+ *Return: return pointer.i
  */
 
 
@@ -15,21 +15,13 @@ int *array_range(int min, int max)
 
 	if (min > max)
 		return (NULL);
-	else if (min < 0)
-	{		
-		i = - min;
-		if (max < 0)
-			i = i + max;
-		else 
-			i = i - max;
-	}
 	else
-	{
-		i = max - min;
+ 		i = max - min;
 
-	}
+	if (i < 0)
+		i = -i;
 
-	p = (int *) malloc(sizeof(p) * i);
+	p = (int *) malloc(sizeof(p) * (i + 1));
 
 	if (p == NULL)
 		return (NULL);
