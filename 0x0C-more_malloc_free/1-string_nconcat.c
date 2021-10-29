@@ -37,7 +37,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (m = 0; m <= lend; m++)
 		p[m + i] = s2[m];
 
-	p[i + lend + 2] = 0;
+	p[i + lend + 1] = 0;
 
 	return (p);
 }
