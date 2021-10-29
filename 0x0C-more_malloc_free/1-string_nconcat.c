@@ -22,12 +22,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (s2[j])
 		j++;
 
-	if (n > 0)
-		lend = (j - n) + 1;
-	else if (n >= j)
-		lend = j;
+	if (n < j)
+		lend = n;
 	else
-		lend = 0;
+		lend = j;
 
 	p = malloc(sizeof(char) * (i + lend + 1));
 
