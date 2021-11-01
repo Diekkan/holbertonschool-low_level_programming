@@ -1,11 +1,12 @@
 #include <stdio.h>
-#define FROM "2-main.c\n"
 /**
- *
+ * main - a program that prints the name of the file it was compiled from.
+ *Return: 0 success
  */
 
 int main(void)
 {
-	printf(FROM);
+	printf(__FILE__);
+	putchar(10);
 	return (0);
 }
