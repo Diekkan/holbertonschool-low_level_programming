@@ -3,16 +3,18 @@
 
 /**
  * int_index - int index.
- * @array: array intself.
+ * @array: array itself.
  * @size: size of the array.
  * @cmp: compare function
+ *
+ * Return: error or  index.
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i, err;
-	err = -1;
 
+	err = -1;
 	if (array && size)
 	{
 		if (size <= 0)
