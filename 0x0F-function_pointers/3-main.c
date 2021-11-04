@@ -9,7 +9,8 @@
 
 int main(int argc, char *argv[])
 {
-	int res;
+	int res, a, b;
+	int (*op) (int, int);
 
 	if (argc != 4)
 	{
@@ -26,9 +27,9 @@ int main(int argc, char *argv[])
 	}
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	result = op(a, b);
+	res = op(a, b);
 
-	printf("%d\n", result);
+	printf("%d\n", res);
 
 	return (0);
 }
