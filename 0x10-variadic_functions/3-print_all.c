@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdarg.h>
+#include <string.h>
 #include "variadic_functions.h"
 
 /**
@@ -29,19 +31,19 @@ void print_all(const char * const format, ...)
 				printf("%d", va_arg(ap, int));
 			break;
 			case ('s'):
-			auxs = va_arg(ap, char *);
-			if (auxs == NULL)
-			{
+				auxs = va_arg(ap, char *);
+				if (auxs == NULL)
+				{
+					printf("%s", separator);
+					printf("(nil)");
+					break;
+				}
 				printf("%s", separator);
-				printf("(nil)");
-				break;
-			}
-			printf("%s", separator);
-			printf("%s", auxs);
+				printf("%s", auxs);
 			break;
 			case('f'):
-			printf("%s", separator);
-			printf("%f", va_arg(ap, double));
+				printf("%s", separator);
+				printf("%f", va_arg(ap, double));
 			break;
 		}
 		separator = ", ";
