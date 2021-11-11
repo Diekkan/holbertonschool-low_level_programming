@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- * list_len - lenght of elements in the list.
+ * list_len - lenght of NODES in the list.
  *@h: address of the linked list.
- *Return: no of elements in list.
+ *Return: no of NODES in list.
  */
 size_t list_len(const list_t *h)
 {
@@ -11,9 +11,7 @@ size_t list_len(const list_t *h)
 
 	while (h)
 	{
-		if (h->str)
-			count++;
-		if (h->len)
+		if (h->str && h->len)
 			count++;
 		h = h->next;
 	}
