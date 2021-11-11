@@ -1,7 +1,8 @@
 #include "lists.h"
 /**
- *
- *
+ * print_list - a function that prints elements of a linked ls.
+ *@h: address of the linked ls
+ *Return: no of elements on the node
  */
 
 size_t print_list(const list_t *h)
