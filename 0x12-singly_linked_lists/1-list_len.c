@@ -11,9 +11,9 @@ size_t list_len(const list_t *h)
 
 	while (h)
 	{
-		if (h->str && h->len)
-			count++;
+		count++;
 		h = h->next;
 	}
+
 	return (count);
 }
