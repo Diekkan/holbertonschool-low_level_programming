@@ -4,18 +4,27 @@
  * add_node - adds a new node at the beginning of a list_t list.
  *@head: first node.
  *@str: string to be duplicated.
+ *Return: address of the new node.
  */
 
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *beg;
+	list_t *nNode;
 
-	beg = malloc(sizeof(list_t));
-	if (beg == NULL)
+	nNode = malloc(sizeof(list_t));
+	if (nNode == NULL)
 		return (NULL);
-	if (str != NULL)
-		beg->str = strdup(str);
-	beg->next = *head;
 
-	return(beg->next);
+	if (str != NULL)
+		nNode->str = strdup(str);
+	else
+	{
+		return (NULL);
+	}
+
+	nNode->len = strlen(nNode->str);
+	nNode->next = *head;
+	*head = nNode;
+
+	return (nNode);
 }
