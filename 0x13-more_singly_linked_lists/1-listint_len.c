@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- *
+ * listint_len - lenght list
+ *@h: h
+ *Return: count
  */
 
 size_t listint_len(const listint_t *h)
