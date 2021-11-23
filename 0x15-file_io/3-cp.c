@@ -1,15 +1,12 @@
 #include "main.h"
 #include <stdio.h>
 
-char *make_buffer(char *file);
-void close_file(int fd);
-
 /**
- * make_buffer - makes a buffer.
+ * create_buffer - makes a buffer.
  *@file: text in file.
  *Return: a buffer to the char.
  */
-char *make_buffer(char *file)
+char *create_buffer(char *file)
 {
 	char *buffer;
 
@@ -50,7 +47,7 @@ void close_file(int fd)
  *Return: 0 if succeed.
  */
 
-int main(int argc, int *argv[])
+int main(int argc, char *argv[])
 {
 	int from, to, r, w;
 	char *buffer;
@@ -61,10 +58,10 @@ int main(int argc, int *argv[])
 		exit(97);
 	}
 
-	buffer = make_buffer(argv[2]);
+	buffer = create_buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
 	r = read(from, buffer, 1024);
-	to = open(argv[2], O_WRONLY | O_TRUNC, 0664);
+	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
 		if (from == -1 || r == -1)
