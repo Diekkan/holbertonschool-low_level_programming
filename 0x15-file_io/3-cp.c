@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 char *make_buffer(char *file);
 void close_file(int fd);
@@ -60,7 +61,7 @@ int main(int argc, int *argv[])
 		exit(97);
 	}
 
-	buffer = create_buffer(argv[2]);
+	buffer = make_buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
 	r = read(from, buffer, 1024);
 	to = open(argv[2], O_WRONLY | O_TRUNC, 0664);
