@@ -17,7 +17,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	nNode = add_node(&(ht->array[newIndex]), value, key);
 
 	if (!nNode)
+	{	
 		return (0);
+	}
 	return (1);
 }
 
@@ -38,6 +40,7 @@ hash_node_t *add_node(hash_node_t **head, const char *str, const char *key)
 	{
 		if (strcmp(key, tmp->key) == 0)
 		{
+			free(tmp->value);
 			tmp->value = strdup(str);
 			return (tmp);
 		}
