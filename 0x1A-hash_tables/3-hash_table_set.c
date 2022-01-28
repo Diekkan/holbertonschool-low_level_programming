@@ -14,7 +14,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if ((ht == NULL) || (key == NULL))
 		return (0);
 	newIndex = key_index((const unsigned char *)key, ht->size);
-	nNode = add_node(&(ht->array[newIndex]), value, key);
+	if ((key_finder(&(ht->array[newIndex]), value, key) == NULL))
+		nNode = add_node(&(ht->array[newIndex]), value, key);
+	else
+		return (1);
 
 	if (!nNode)
 		return (0);
@@ -49,3 +52,29 @@ hash_node_t *add_node(hash_node_t **head, const char *str, const char *key)
 
 	return (nNode);
 }
+
+/**
+ * key_finder - finds if key already exists on index
+ *@head: head pointer
+ *@key: key value
+ *@value: value
+ *Return: NULL if key not found in index, or pointer to key.
+ */
+hash_node_t *key_finder(hash_node_t **head, const char *key, const char *value)
+{
+	hash_node_t *tmp = NULL;
+	
+	tmp = *head;
+	while (tmp)
+	{
+		if (strcmp(key, tmp->key) == 0)
+		{
+			tmp->value = strdup(value);
+			return (tmp);
+		}
+		tmp = tmp->next;
+	}
+
+	return (NULL);
+}
+
