@@ -12,9 +12,9 @@ school: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 clean:
 	$(RM) *~ .*.swp $(NAME)
-oclean: $(OBJ)
+oclean:
 	$(RM) $(OBJ)
-fclean: $(OBJ)
+fclean:
 	$(RM) *~ .*.swp $(NAME)
 	$(RM) $(OBJ)
 re: fclean all
