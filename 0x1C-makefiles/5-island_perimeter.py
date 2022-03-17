@@ -13,17 +13,26 @@ def island_perimeter(grid):
         for element in row:
             if element == 1:
                 perimeter += 4
-                if j < len(row):
-                    if i < len(grid):
-                        if grid[i + 1][j] == 1:
-                            perimeter -= 1
+                try:
+                    if grid[i + 1][j] == 1:
+                        perimeter -= 1
+                except Exception:
+                    pass
+                try:
                     if row[j + 1] == 1:
                         perimeter -= 1
-                if j >= 1:
+                except Exception:
+                    pass
+                try:
                     if grid[i - 1][j] == 1:
                         perimeter -= 1
+                except Exception:
+                    pass
+                try:
                     if row[j - 1] == 1:
                         perimeter -= 1
+                except Exception:
+                    pass
             j += 1
         j = 0
         i += 1
