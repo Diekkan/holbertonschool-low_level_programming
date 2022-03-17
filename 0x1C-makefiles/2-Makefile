@@ -11,3 +11,4 @@ objects: $(SRC)
 	$(CC) -c $(SRC)
 school: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
+
