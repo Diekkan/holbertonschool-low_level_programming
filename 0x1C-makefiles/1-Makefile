@@ -1,4 +1,5 @@
 #first makefile
+
 CC = gcc
 SRC = main.o school.o
 
@@ -8,6 +9,5 @@ school.o: school.c
 	$(CC) -c school.c
 main.o: main.c
 	$(CC) -c main.c
-
 school: $(SRC)
 	$(CC) $(SRC) -o school
