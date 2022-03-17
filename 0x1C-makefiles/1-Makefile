@@ -1,14 +1,12 @@
 #first makefile
 
 CC = gcc
-SRC = main.o school.o
+SRC = main.c school.c
 
 all: school.o main.o school
 
-school.o: school.c
-	$(CC) -c school.c
-main.o: main.c
-	$(CC) -c main.c
-school: $(SRC)
-	$(CC) $(SRC) -o school
+objects: $(SRC)
+	$(CC) -c $(SRC)
+school: main.o school.o
+	$(CC) main.o school.o -o school
 
