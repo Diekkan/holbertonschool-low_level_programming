@@ -11,3 +11,4 @@ main.o: main.c
 	$(CC) -c main.c
 school: $(SRC)
 	$(CC) $(SRC) -o school
+
