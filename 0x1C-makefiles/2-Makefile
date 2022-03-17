@@ -8,7 +8,7 @@ NAME = school
 all: objects school
 
 objects: $(SRC)
-	$(CC) -c $(SRC)
+	gcc -c $(SRC)
 school: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
