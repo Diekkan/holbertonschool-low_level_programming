@@ -5,10 +5,8 @@ SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 
-all: objects school
+all: school
 
-objects: $(SRC)
-	gcc -c $(SRC)
 school: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
